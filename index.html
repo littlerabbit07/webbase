@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CRT Terminal Website</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- CRT Intro -->
+  <div id="crt-intro" class="crt-intro"></div>
+
+  <div id="main-content" class="hidden">
+    <header>
+      <nav>
+        <div class="logo">> MyCRT_Terminal</div>
+        <ul class="nav-links">
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="hero" class="hero glitch">
+      <div class="hero-content">
+        <h1 id="typing-text"></h1>
+        <span class="terminal-prompt">></span><span class="cursor">█</span>
+        <p>Your retro-cyber experience awaits.</p>
+
+        <!-- Terminal input -->
+        <div class="terminal-input">
+          <span class="prompt-text">> </span>
+          <input type="text" id="terminalCommand" placeholder="Type command..." autocomplete="off" />
+        </div>
+        <div id="command-output"></div>
+
+        <a href="#contact" class="btn">Connect</a>
+      </div>
+    </section>
+
+    <section id="about" class="about">
+      <h2>About</h2>
+      <p>We build retro-inspired websites that feel alive and nostalgic.</p>
+    </section>
+
+    <section id="features" class="features">
+      <h2>Features</h2>
+      <div class="feature-cards">
+        <div class="card">
+          <h3>OLED Friendly</h3>
+          <p>True black background saves energy.</p>
+        </div>
+        <div class="card">
+          <h3>Retro Vibes</h3>
+          <p>Brings back the CRT glow.</p>
+        </div>
+        <div class="card">
+          <h3>Fully Responsive</h3>
+          <p>Works on modern screens too.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <h2>Contact Us</h2>
+      <form id="contactForm">
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <textarea placeholder="Your Message" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+      <p id="form-message"></p>
+    </section>
+
+    <footer>
+      <p>© 2025 CRT Terminal. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <audio id="crt-audio" src="sounds/crt_boot.mp3" preload="auto"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
