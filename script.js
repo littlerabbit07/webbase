@@ -58,4 +58,23 @@ document.addEventListener("DOMContentLoaded", () => {
       terminalInput.value = "";
     }
   });
+
+  // Play CRT sound on header link click
+  const headerLinks = document.querySelectorAll("header a, .header a");
+  headerLinks.forEach(link => {
+    link.addEventListener("click", () => {
+      // Restart audio if already playing
+      crtAudio.currentTime = 0;
+      crtAudio.play();
+    });
+  });
+
+  // Ensure audio can play on first user interaction (for browsers that block autoplay)
+  function unlockAudio() {
+    crtAudio.play().catch(() => {});
+    window.removeEventListener('click', unlockAudio);
+    window.removeEventListener('keydown', unlockAudio);
+  }
+  window.addEventListener('click', unlockAudio);
+  window.addEventListener('keydown', unlockAudio);
 });
