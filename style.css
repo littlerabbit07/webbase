@@ -113,22 +113,33 @@ body::after {
   100% { text-shadow: 0 0 5px #00FF00; }
 }
 
-/* Sticky footer layout */
+/* Sticky footer fix */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
 #main-content {
   flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
 }
-
 footer {
   flex-shrink: 0;
   width: 100%;
   position: relative;
-  bottom: 0;
   left: 0;
   background: #111;
   color: #0f0;
   text-align: center;
   padding: 1em 0;
   box-shadow: 0 -2px 8px #0f08;
+  z-index: 10;
 }
 
 /* Rest of styles unchanged (header, nav, hero, cards, contact, footer) */
