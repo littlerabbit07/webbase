@@ -196,6 +196,24 @@ section { padding: 4rem 2rem; text-align: center; }
   background: rgba(0, 255, 0, 0.05);
 }
 
+a.card, div.card {
+  display: block;
+  background: #181818;
+  color: #00ff99;
+  border: 2px solid #00ff99;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 1rem 0.5rem;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s, border 0.2s;
+  box-shadow: 0 2px 8px #000a;
+}
+a.card:hover, div.card:hover {
+  background: #00ff99;
+  color: #181818;
+  border-color: #fff;
+}
+
 .contact form {
   display: flex; flex-direction: column;
   gap: 1rem; max-width: 500px;
